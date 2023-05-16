@@ -95,15 +95,15 @@ nome-projeto
 ### Configurando o PyCharm
 
 1. Feche todos os projetos da IDE e a customize. Clique em _All settings_.
-   ![Tela de boas-vindas do PyCharm com a indicacao de clicar no link All setting do menu Customize](assets\pycharm01.png "Customizar o PyCharm")
+   ![Tela de boas-vindas do PyCharm com a indicacao de clicar no link All setting do menu Customize](https://github.com/cicerohr/nome_projeto/blob/main/docs/assets/pycharm01.png "Customizar o PyCharm")
 2. No interpretador do Python clique em _Add interpreter_.
-   ![Seta indicando para clicar en Add interpreter](assets\pycharm02.png "Tela do interpretador do Python")
+   ![Seta indicando para clicar en Add interpreter](https://github.com/cicerohr/nome_projeto/blob/main/docs/assets/pycharm02.png "Tela do interpretador do Python")
 3. Selecione _Poetry Environment_ e busque o executável do Poetry.
    C:\Users\nome_usuario\AppData\Roaming\Python\Scripts\
-   ![Seta indica onde deve se clicado](assets\pycharm03.png "Tela para adicionar o poetry.exe")
+   ![Seta indica onde deve se clicado](https://github.com/cicerohr/nome_projeto/blob/main/docs/assets/pycharm03.png "Tela para adicionar o poetry.exe")
 4. Altere o formato da _docstrings_ para Google selecionando  _Python
    Integrated Tools_.
-   ![Seta indicando a seleção do Google na formacao dos docstrings](assets\pycharm04.png "Tela para alterar o formato da docstrings para Google")
+   ![Seta indicando a seleção do Google na formacao dos docstrings](https://github.com/cicerohr/nome_projeto/blob/main/docs/assets/pycharm04.png "Tela para alterar o formato da docstrings para Google")
 5. Abra o projeto no PyCharm.
 6. Gere o [.gitignore](https://www.toptal.com/developers/gitignore) para
    PyCharm e Python.
