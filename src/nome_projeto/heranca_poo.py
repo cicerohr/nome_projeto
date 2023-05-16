@@ -1,4 +1,4 @@
-"""Projeto para testar a documentação automática do MKDocs-material com o
+"""Projeto para testar a documentação automática do MkDocs-material com o
 plugin mkdocstrings.
 
 Exemplo com herança POO.

@@ -62,7 +62,7 @@ watch:
 
 plugins:
   - search:
-      lang: pt-BR
+      lang: pt
   - mkdocstrings:
       handlers:
         python:
