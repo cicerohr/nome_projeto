@@ -2,7 +2,11 @@
 
 Aviso:
 
-    Este é um roteiro para instalação do projeto em uma máquina Windows para atender as minhas necessidades, portanto nao há qualquer garantia ou suporte para este roteiro.
+```
+Este é um roteiro para instalação do projeto em uma máquina Windows para 
+atender as minhas necessidades, portanto nao há qualquer garantia ou suporte 
+a este.
+```
 
 ## Objetivo
 
@@ -12,7 +16,7 @@ vez nos _docstrings_ do código Python e tenha a documentação atualizada.
 
 Manter a documentação gerada automaticamente significa menos esforço porque
 você está vinculando informações entre seu código e as páginas de documentação,
-guiando por meio de exemplos e conectar os pontos entre as _docstrings_.
+guiando por meio de exemplos e conectar os pontos entre os _docstrings_.
 
 ## O que é necessário?
 
@@ -94,16 +98,17 @@ nome-projeto
 
 ### Configurando o PyCharm
 
-1. Feche todos os projetos da IDE e a customize. Clique em _All settings_.
+1. Feche todos os projetos da IDE e clique em _Customize_ e depois em _All
+   settings_.
    ![Tela de boas-vindas do PyCharm com a indicacao de clicar no link All setting do menu Customize](https://github.com/cicerohr/nome_projeto/blob/main/docs/assets/pycharm01.png "Customizar o PyCharm")
 2. No interpretador do Python clique em _Add interpreter_.
    ![Seta indicando para clicar en Add interpreter](https://github.com/cicerohr/nome_projeto/blob/main/docs/assets/pycharm02.png "Tela do interpretador do Python")
 3. Selecione _Poetry Environment_ e busque o executável do Poetry.
    C:\Users\nome_usuario\AppData\Roaming\Python\Scripts\
    ![Seta indica onde deve se clicado](https://github.com/cicerohr/nome_projeto/blob/main/docs/assets/pycharm03.png "Tela para adicionar o poetry.exe")
-4. Altere o formato da _docstrings_ para Google selecionando  _Python
-   Integrated Tools_.
-   ![Seta indicando a seleção do Google na formacao dos docstrings](https://github.com/cicerohr/nome_projeto/blob/main/docs/assets/pycharm04.png "Tela para alterar o formato da docstrings para Google")
+4. Altere o formato do _docstrings_ para Google em _Tools_ > _Python Integrated
+   Tools_.
+   ![Seta indicando a seleção do Google no Docstrings format](https://github.com/cicerohr/nome_projeto/blob/main/docs/assets/pycharm04.png "Tela para alterar o formato do docstrings para Google")
 5. Abra o projeto no PyCharm.
 6. Gere o [.gitignore](https://www.toptal.com/developers/gitignore) para
    PyCharm e Python.
@@ -111,7 +116,7 @@ nome-projeto
 
 ### Adicionar os pacotes
 
-Dentro do PyCharm abra o PowerShell e execute os comandos abaixo.
+Dentro do PyCharm abra o PowerShell e execute os comandos abaixo:
 
 ```commandline
 poetry add --group docs mkdocs-material
@@ -139,13 +144,13 @@ poetry add --group dev taskipy
 
 ## Criar documentação do projeto
 
-Adiciona um diretório, na raiz do projeto, nomeado `docs`
+O comando adiciona um diretório, na raiz do projeto, nomeado `docs`.
 
 ```commandline
 mkdocs new .
 ```
 
-Commit para instalação dos pacotes
+Commit para instalação dos pacotes.
 
 ### Personalizar o tema modificando o arquivo mkdocs.yml
 
@@ -227,11 +232,12 @@ plugins:
 
 ### Colocando identificadores para os arquivos exemplos
 
-Crie um diretório `api`, no diretório `docs`, e dentro crie um arquivo `.md` com o mesmo nome do 
+Crie um diretório `api`, no diretório `docs`, e dentro crie um arquivo `.md`
+com o mesmo nome do
 arquivo a ser manipulado pelo mkdocstrings.
 
-Dentro do arquivo `.md`, no diretório api, coloque o identificador, 
-após três dois pontos seguidos, com o mesmo nome do arquivo Python. 
+Dentro do arquivo `.md`, no diretório api, coloque o identificador,
+após três dois pontos seguidos, com o mesmo nome do arquivo Python.
 (::: nome_arquivo)
 
 ```markdown
@@ -255,7 +261,7 @@ Exemplo:
     └── tests
         └── __init__.py
 
-Commit para personalização do Material for MkDocs
+Commit para personalização do Material for MkDocs.
 
 ## Configurando o arquivo pyproject.toml
 
@@ -303,7 +309,7 @@ post_test = "coverage html"
 
 ```
 
-Commit para configuração do Pytest, lint e taskiPy
+Commit para configuração do Pytest, lint e taskiPy.
 
 ## Rodar o servidor do MkDocs
 
@@ -311,5 +317,5 @@ Commit para configuração do Pytest, lint e taskiPy
 mkdocs serve
 ```
 
-Depois do servidor iniciar clique no linque `http://127.0.0.1:8000/` e veja o 
+Depois do servidor iniciar clique no linque `http://127.0.0.1:8000/` e veja o
 resultado.
