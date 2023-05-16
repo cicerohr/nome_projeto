@@ -48,8 +48,7 @@ guiando por meio de exemplos e conectar os pontos entre as _docstrings_.
   arquivo [pyproject.toml](https://realpython.com/python-toml/). Ele permite
   que você use o
   Poetry para gerenciar suas tarefas, como executar testes, construir pacotes
-  ou
-  implantar seu projeto.
+  ou implantar projeto.
 
 ### Ambiente virtual
 
@@ -105,13 +104,14 @@ nome-projeto
 4. Altere o formato da _docstrings_ para Google selecionando  _Python
    Integrated Tools_.
    ![Seta indicando a seleção do Google na formacao dos docstrings](assets\pycharm04.png "Tela para alterar o formato da docstrings para Google")
-5. Gere o [.gitignore](https://www.toptal.com/developers/gitignore) para
-   PyCharm e Python
-6. Commit inicial para estrutura do projeto
+5. Abra o projeto no PyCharm.
+6. Gere o [.gitignore](https://www.toptal.com/developers/gitignore) para
+   PyCharm e Python.
+7. Commit inicial para estrutura do projeto.
 
 ### Adicionar os pacotes
 
-Dentro do projeto abra o PowerShell e execute os comandos abaixo.
+Dentro do PyCharm abra o PowerShell e execute os comandos abaixo.
 
 ```commandline
 poetry add --group docs mkdocs-material
@@ -137,7 +137,9 @@ poetry add --group dev blue
 poetry add --group dev taskipy
 ```
 
-## Criar documentação
+## Criar documentação do projeto
+
+Adiciona um diretório, na raiz do projeto, nomeado `docs`
 
 ```commandline
 mkdocs new .
@@ -212,7 +214,7 @@ watch:
 
 plugins:
   - search:
-      lang: pt-BR
+      lang: pt
   - mkdocstrings:
       handlers:
         python:
@@ -223,9 +225,39 @@ plugins:
 
 ```
 
+### Colocando identificadores para os arquivos exemplos
+
+Crie um diretório `api`, no diretório `docs`, e dentro crie um arquivo `.md` com o mesmo nome do 
+arquivo a ser manipulado pelo mkdocstrings.
+
+Dentro do arquivo `.md`, no diretório api, coloque o identificador, 
+após três dois pontos seguidos, com o mesmo nome do arquivo Python. 
+(::: nome_arquivo)
+
+```markdown
+heranca_poo.md
+
+::: heranca_poo
+```
+
+Exemplo:
+
+    nome-projeto
+    ├── pyproject.toml
+    ├── README.md
+    ├── docs
+    │   └── api
+    │       └── heranca_poo.md
+    ├── src
+    │   └── nome_projeto
+    │       ├── __init__.py
+    │       └── heranca_poo.py
+    └── tests
+        └── __init__.py
+
 Commit para personalização do Material for MkDocs
 
-### Configurando o arquivo pyproject.toml
+## Configurando o arquivo pyproject.toml
 
 ```toml
 [tool.poetry]
@@ -272,3 +304,12 @@ post_test = "coverage html"
 ```
 
 Commit para configuração do Pytest, lint e taskiPy
+
+## Rodar o servidor do MkDocs
+
+```commandline
+mkdocs serve
+```
+
+Depois do servidor iniciar clique no linque `http://127.0.0.1:8000/` e veja o 
+resultado.
